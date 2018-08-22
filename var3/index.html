@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>2018-05 Responsive Navbar</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="logo">LOGO</div>
+		<nav>
+			<ul>
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li class="sub-menu"><a href="#">Services</a>
+					<ul>
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+						<li><a href="#">Link 4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Team</a></li>
+				<li class="sub-menu"><a href="#">Portfolio</a>
+					<ul>
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+						<li><a href="#">Link 4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="menu-toggle"><i class="fa fa-bars"></i></div>
+	</header>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(() => {
+			$('.menu-toggle').click(() => {
+				$('nav').toggleClass('active');
+			});
+			$('li.sub-menu').click(function(){
+				$(this).siblings().removeClass('sub-active');
+				$(this).toggleClass('sub-active');
+			});
+		});
+	</script>
+</body>
+</html>
