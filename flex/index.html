@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flex</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Flexbox</h1>
+	<h2>Свойства для контейнера</h2>
+	<h3>.wrap{ display: flex; }</h3>
+	<div class="wrap">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+	<h3>.wrap-inline{ display: inline-flex; } строковые</h3>
+	<div class="wrap-inline">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+	<h2>Flex Direction</h2>
+	<h3>.wrap { flex-direction: row; } (default)</h3>
+	<div class="wrap flex-direction-row">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+	<h3>.wrap { flex-direction: row-reverse; }</h3>
+	<div class="wrap flex-direction-rev">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+	<h3>.wrap { flex-direction: column; }</h3>
+	<div class="wrap flex-direction-col">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+	</div>
+
+	<h3>.wrap { flex-direction: column-reverse; }</h3>
+	<div class="wrap flex-direction-rcol">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+	</div>
+
+
+	<h2>Flex wrap</h2>
+	<h3>.wrap (width: 250px) { flex-wrap: nowrap; } (default)</h3>
+	<div class="wrap flex-nowrap">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+	<h3>.wrap (width: 250px) { flex-wrap: wrap; }</h3>
+	<div class="wrap flex-wrap">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+	<h3>.wrap { flex-wrap: flex-wrap-reverse; }</h3>
+	<div class="wrap flex-wrap-reverse">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+<h2>Flex justify-content</h2>
+	<h3>.wrap { justify-content: flex-start; } (default)</h3>
+	<div class="wrap justify-content-flex-start">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+	<h3>.wrap { justify-content: center; }</h3>
+	<div class="wrap justify-content-center">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+	<h3>.wrap { justify-content: flex-end; }</h3>
+	<div class="wrap justify-content-flex-end">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+	<h3>.wrap { justify-content: space-between; }</h3>
+	<div class="wrap justify-content-space-between">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+	<h3>.wrap { justify-content: space-around; }</h3>
+	<div class="wrap justify-content-space-around">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+<h2>Свойства для вложенных элементов</h2>
+
+	<h3>.item { order: num; }</h3>
+	<div class="wrap">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item flex-order">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+	<h3>.item { align-items: flex-start }</h3>
+	<div class="wrap h300 align-items-flex-start">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item flex-order">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+	<h3>.item { align-items: center }</h3>
+	<div class="wrap h300 align-items-center">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item flex-order">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+	<h3>.item { align-items: flex-end }</h3>
+	<div class="wrap h300 align-items-flex-end">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item flex-order">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+
+
+</body>
+</html>
